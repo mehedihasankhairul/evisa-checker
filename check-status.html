@@ -1,0 +1,241 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>e-VISA</title>
+    <script src="scripts/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="scripts/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="scripts/js/general.js?v=50" type="text/javascript"></script>
+    <script src="scripts/js/menu.js" type="text/javascript"></script>
+    <link href="./css/general.css?v=50" rel="stylesheet" type="text/css" />
+    <link href="./css/menu.css?v=50" rel="stylesheet" type="text/css" />
+    <link href="./css/flick/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="./css/tooltip.css" rel="stylesheet" type="text/css" />
+    <!--For Google Search  -->
+    <meta
+      name="description"
+      content="Welcome to the Kyrgyzstan Official Electronic Visa Portal! Visa to Kyrgyzstan for Tourist or Business. Apply now online. Easy, safe and fast application process."
+    />
+    <meta
+      name="Kyrgyz Republic evisa, Kyrgyz Republic electronic visa, Kyrgyz Republic visa, Kyrgyzstan visa, Kyrgyzstan electronic visa, Kyrgyzstan evisa, Kyrgyz online visa, Kyrgyzstan online visa, Kyrgyz Republic online visa"
+    />
+    <!--For Google Search  -->
+  </head>
+  <body>
+    <!-- modal-dialog Dialog -->
+    <div class="modal-dialog">
+      <div class="modal-dialog-content">
+        <div class="modal-dialog-header">
+          <span class="modal-dialog-close" onClick="$('.modal-dialog').hide();">×</span>
+          <span class="modal-dialog-title">Notification</span>
+        </div>
+        <div class="modal-dialog-body">
+          <p>Text in the modal-dialog Body</p>
+        </div>
+        <div class="modal-dialog-footer">
+          <div class="modal-dialog-ok" onClick="$('.modal-dialog').hide();">Ok</div>
+        </div>
+      </div>
+    </div>
+    <!-- modal-dialog Dialog -->
+
+    <!-- Loading -->
+    <div class="spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <!-- Loading -->
+
+    <center>
+      <!-- mainContent Start -->
+      <div class="mainContent">
+        <div class="topBar_1975">
+          <table cellpadding="0" cellspacing="0" width="1100">
+            <tr>
+              <td align="left">
+                <a href="index.php"><img src="images/img/logo.png" class="logo_6999" /></a>
+              </td>
+              <td align="right">
+                <nav role="navigation" class="nav">
+                  <ul class="nav-items">
+                    <li class="nav-item dropdown">
+                      <a href="#" class="nav-link"><span>SERVICES</span></a>
+                      <nav class="submenu">
+                        <ul class="submenu-items">
+                          <li class="submenu-item" onClick="window.location.href='step_1.php?lng=en';">
+                            <a class="submenu-link">Apply for a visa</a>
+                          </li>
+                          <li class="submenu-item" onClick="window.location.href='check_status.php?lng=en';">
+                            <a class="submenu-link">Continue your application</a>
+                          </li>
+                          <li class="submenu-item" onClick="window.location.href='check_status.php?lng=en';">
+                            <a class="submenu-link">Check status</a>
+                          </li>
+                          <!--<li class="submenu-item"><a href="" class="submenu-link"></a></li>-->
+                          <li class="submenu-item" onClick="window.location.href='transfer_visa.php?lng=en';">
+                            <a class="submenu-link">Visa transfer to new passport</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </li>
+                    <li class="nav-item">
+                      <a href="about_kyrgyzstan.php?lng=en" class="nav-link"><span>ABOUT KYRGYZSTAN</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="get_information.php?lng=en" class="nav-link"><span>INFORMATION</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="contact_us.php?lng=en" class="nav-link"><span>CONTACT US</span></a>
+                    </li>
+                    <li class="nav-item" style="margin-left: 25px; margin-right: 7px">
+                      <a href="check_status.php?lng=ky" class="nav-link"><span alt="ky" class="">KG</span></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 7px">
+                      <a href="check_status.php?lng=ru" class="nav-link"><span alt="ru" class="">RU</span></a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 7px">
+                      <a href="check_status.php?lng=en" class="nav-link"><span alt="en" class="actLang">EN</span></a>
+                    </li>
+                  </ul>
+                </nav>
+              </td>
+              <td align="right" valign="top">
+                <a href="login.php?lng=en" class="ssil_1177" style="line-height: 30px">Log in to personal account </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="informBox_5566">
+          <b>Information box</b><br />
+          In order to check status of your application or continue unfinished application, please enter your application
+          reference number in the relevant box. If you do not know this number, you can find it in the e-mail message
+          that we sent to you. It is 8-symbol alphanumeric code.
+        </div>
+        <br /><br />
+
+        <div
+          id="user-info"
+          style="
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+          "
+        ></div>
+
+        <form id="check_status_form">
+          <!-- Reference Number Section -->
+          <div id="reference-section">
+            <table cellpadding="4" cellspacing="4">
+              <tr>
+                <td>
+                  <span class="lab_1478">insert your reference number</span><br />
+                  <input type="text" value="" id="reference_numb" name="reference_numb" class="inp_6966" required />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="padding-top: 20px" id="captcha-section">
+                    <div
+                      id="captchaimg"
+                      style="
+                        font-size: 30px;
+                        font-weight: bold;
+                        background-color: #f0f0f0;
+                        padding: 8px 20px;
+                        display: inline-block;
+                        margin-right: 10px;
+                        color: #17255a;
+                        text-decoration: line-through;
+
+                        letter-spacing: 1px;
+                      "
+                    ></div>
+                    <img src="images/img/refresh_icon.png" class="refreshIcon" style="cursor: pointer" />
+                    <input type="text" id="vpb_captcha_code" name="vpb_captcha_code" class="inp_6966" required />
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <br />
+            <input style="margin-top: 20px" type="button" class="btn_3256" id="btn_next" value="NEXT" />
+          </div>
+
+          <!-- OTP Section -->
+          <div id="otp-section" style="display: none">
+            <table cellpadding="4" cellspacing="4">
+              <tr>
+                <td>
+                  <span class="lab_1478">Insert your Security Code</span><br />
+                  <input type="text" id="otp_input" name="otp_input" class="inp_6966" required />
+                </td>
+              </tr>
+            </table>
+            <br />
+            <input type="button" id="btn_validate_otp" class="btn_3256" value="NEXT" />
+            <br />
+            <br />
+            <button type="button" id="btn_send_code" class="btn_3256" style="margin-top: 10px">
+              SEND ME SECURITY CODE BY EMAIL
+            </button>
+          </div>
+        </form>
+
+        <div class="msgBox_6774">
+          Attention ! If you already have a personal account on the ‘Electronic work permit’ portal, you can use its
+          data to apply for the “Uniform permit”. In this case , you need to enter the email address used for E-work in
+          the “Login” field. If you intend to continue using the personal account that you have used on the ”Electronic
+          Work Permit” portal, please provide the following additional documents : charter, founding agreement,
+          certificate of tax debts from the Tax service and a resolution or power of attorney if necessary.
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+        <br /><br /><br /><br />
+        <table class="wdt_900" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="left">
+              <a href="#" target="_blank"><img src="images/img/icon_tviter.png" /></a>
+              <a href="#" target="_blank"><img src="images/img/icon_instagram.png" /></a>
+              <a href="#" target="_blank"><img src="images/img/icon_facebook.png" /></a>
+              <a href="#" target="_blank"><img src="images/img/icon_vkontakte.png" /></a>
+            </td>
+            <td align="right">
+              <a href="http://www.mfa.gov.kg/" target="_blank"><img src="images/img/mid.png" /></a>
+            </td>
+          </tr>
+        </table>
+        <br />
+      </div>
+      <!-- Modal Notification -->
+      <div id="email-notification-modal" class="modal-dialog" style="display: none">
+        <div class="modal-dialog-content">
+          <div class="modal-dialog-header">
+            <span class="modal-dialog-close" onclick="closeModal()">×</span>
+            <span class="modal-dialog-title">Notification</span>
+          </div>
+          <div class="modal-dialog-body">
+            <p>
+              We have sent you an email with your security code. Check your email and return here to insert the security
+              code in the corresponding box.
+            </p>
+          </div>
+          <div class="modal-dialog-footer">
+            <button class="btn_3256" onclick="closeModal()">Ok</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- mainContent End -->
+      <!-- User Information Display -->
+    </center>
+
+    <script src="scripts/js/general.js?v=1.0" type="text/javascript"></script>
+  </body>
+</html>
