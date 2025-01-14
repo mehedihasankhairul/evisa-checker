@@ -5,12 +5,12 @@
     <title>e-VISA</title>
     <!-- <script src="scripts/js/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="scripts/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script> -->
-    <script src="../scripts/js/general.js?v=50" type="text/javascript"></script>
-    <script src="../scripts/js/menu.js" type="text/javascript"></script>
-    <link href="../css/general.css" rel="stylesheet" type="text/css" />
-    <link href="../css/menu.css?v=50" rel="stylesheet" type="text/css" />
-    <link href="../css/flick/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
-    <link href="../css/tooltip.css" rel="stylesheet" type="text/css" />
+    <script src="/scripts/js/general.js?v=50" type="text/javascript"></script>
+    <script src="/scripts/js/menu.js" type="text/javascript"></script>
+    <link href="./css/general.css" rel="stylesheet" type="text/css" />
+    <link href="./css/menu.css?v=50" rel="stylesheet" type="text/css" />
+    <link href="./css/flick/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="./css/tooltip.css" rel="stylesheet" type="text/css" />
     <!--For Google Search  -->
     <meta
       name="description"
@@ -55,7 +55,7 @@
           <table cellpadding="0" cellspacing="0" width="1100">
             <tr>
               <td align="left">
-                <a href="/"><img src="images/img/logo.png" class="logo_6999" /></a>
+                <a href="/"><img src="./images/img/logo.png" class="logo_6999" /></a>
               </td>
               <td align="right">
                 <nav role="navigation" class="nav">
@@ -162,7 +162,13 @@
                         letter-spacing: 1px;
                       "
                     ></div>
-                    <img src="images/img/refresh_icon.png" class="refreshIcon" style="cursor: pointer" />
+                    <img
+                      src="images/img/refresh_icon.png"
+                      class="refreshIcon"
+                      id="refreshIcon"
+                      style="cursor: pointer"
+                      onclick="refreshCaptcha()"
+                    />
                     <input type="text" id="vpb_captcha_code" name="vpb_captcha_code" class="inp_6966" required />
                   </div>
                 </td>
@@ -211,7 +217,7 @@
               <a href="#" target="_blank"><img src="images/img/icon_vkontakte.png" /></a>
             </td>
             <td align="right">
-              <a href="http://www.mfa.gov.kg/" target="_blank"><img src="images/img/mid.png" /></a>
+              <a href="http://www.mfa.gov.kg/" target="_blank"><img src="./images/img/mid2.png" /></a>
             </td>
           </tr>
         </table>
@@ -241,6 +247,6 @@
     </center>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
-    <script src="../scripts/js/general.js"></script>
+    <script src="scripts/js/general.js"></script>
   </body>
 </html>

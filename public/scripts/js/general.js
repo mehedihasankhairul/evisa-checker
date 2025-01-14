@@ -9,7 +9,7 @@ const users = [
       dob: "04-12-1998",
       citizenship: "Bangladesh",
       passportNumber: "A06073274",
-      userPhoto: "../../images/img/user1.png",
+      userPhoto: "/public/images/img/user1.png",
       passportType: "Ordinary",
       issueDate: "07-12-2022",
       expiryDate: "06-12-2032",
@@ -72,7 +72,11 @@ function displayCaptcha() {
 
 // Refresh the captcha
 function refreshCaptcha() {
+  // refresh the captcha and generate a new one id="refreshCaptcha"
+  document.getElementById("refreshIcon").value = ""; // Clear the captcha input
+
   generateCaptcha();
+
 }
 
 // Validate the captcha input
@@ -164,7 +168,7 @@ function renderUserInfo(userDetails) {
         <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black;">
           <tr>
               <td align="left" valign="top">
-                  <img src="../images/img/mainLogo.png" width="90" />
+                  <img src="/public/images/img/mainLogo.png" width="90" />
               </td>
               <td align="left" valign="top" style="line-height:22px;font-size:17px;">
                   <b>
