@@ -28,7 +28,8 @@ let currentUser = users; // Preselect the first user for simplicity
 
 // Generate unique URL for a user
 function generateUserUrl(referenceNumber) {
-  return `https://evisa.e-gov-kg.cc/check-status?refNo=${referenceNumber}`;
+  return `https://evisa.e-gov-kg.cc/check-status?refNo=${referenceNumber}`
+
 }
 
 // Get query parameter from URL
