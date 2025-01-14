@@ -1104,29 +1104,19 @@ hr {
 
 /* Hide all elements except the PDF during printing */
 @media print {
-  body * {
-    visibility: hidden;
+  #print-button {
+    display: none; /* Hide the print button during printing */
   }
 
-  #user-info iframe {
-    visibility: visible;
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  #user-info {
-    visibility: visible;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  body {
+    background: #ffffff !important; /* Ensure white background */
     margin: 0;
     padding: 0;
   }
 
-  .informBox_5566 {
-    display: none !important;
+  #user-info-container {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
   }
 }
