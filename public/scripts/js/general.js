@@ -169,7 +169,7 @@ function renderUserInfo(userDetails) {
         <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black;">
           <tr>
               <td align="left" valign="top">
-                  <img src="/public/images/img/mainLogo.png" width="90" />
+                  <img src="../../images/img/mainLogo.png" width="90" />
               </td>
               <td align="left" valign="top" style="line-height:22px;font-size:17px;">
                   <b>
