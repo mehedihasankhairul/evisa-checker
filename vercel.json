@@ -1,3 +1,6 @@
 {
-  "rewrites": [{ "source": "/check-status", "destination": "/check-status.html" }]
+  "rewrites": [
+    { "source": "/check-status", "destination": "/check-status.html" },
+    { "source": "/", "destination": "/index.html" }
+  ]
 }
