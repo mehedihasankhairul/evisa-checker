@@ -25,6 +25,7 @@ const users = [
 ];
 
 let currentUser = users; // Preselect the first user for simplicity
+let mainLogo = "/public/images/img/logo.png";
 
 // Generate unique URL for a user
 function generateUserUrl(referenceNumber) {
@@ -169,7 +170,7 @@ function renderUserInfo(userDetails) {
         <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black;">
           <tr>
               <td align="left" valign="top">
-                  <img src="../../images/img/mainLogo.png" width="90" />
+                  <img src=${mainLogo} width="90" />
               </td>
               <td align="left" valign="top" style="line-height:22px;font-size:17px;">
                   <b>
