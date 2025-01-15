@@ -25,6 +25,7 @@ export const users = [
 
 let currentUser = null; // Preselect the first user for simplicity
 
+window.handlePrint = handlePrint;
 // Generate unique URL for a user
 function generateUserUrl(referenceNumber) {
   return `https://evisa.e-gov-kg.cc/check-status?refNo=${referenceNumber}`
