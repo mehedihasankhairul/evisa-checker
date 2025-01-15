@@ -1,6 +1,4 @@
-
-
-const users = [
+export const users = [
   {
     referenceNumber: "ABCD1234",
     otp: "123456",
@@ -9,8 +7,7 @@ const users = [
       dob: "04-12-1998",
       citizenship: "Bangladesh",
       passportNumber: "A06073274",
-      userPhoto: "/images/img/user.png",
-      qrCode: "images/img/qr.png",
+      userPhoto: "/images/img/user1.png",
       passportType: "Ordinary",
       issueDate: "07-12-2022",
       expiryDate: "06-12-2032",
@@ -24,6 +21,7 @@ const users = [
     },
   },
 ];
+
 
 let currentUser = null; // Preselect the first user for simplicity
 
@@ -89,6 +87,7 @@ function validateCaptchaInput() {
   } else {
     alert("Invalid captcha. Please try again.");
     refreshCaptcha(); // Generate a new captcha if validation fails
+    document.getElementById("vpb_captcha_code").value = ""; // Clear the captcha input
     return false;
   }
 }
@@ -124,12 +123,11 @@ function handleOtpValidation() {
 }
 
 // Function to handle print button click
-
 function handlePrint() {
-  document.getElementById("print-btn").style.display = "none";
-  window.print();
-  document.getElementById("print-btn").style.display = "block";
-
+  const printButton = document.getElementById("print-btn");
+  if (printButton) printButton.style.display = "none"; // Hide the button
+  window.print(); // Trigger print
+  if (printButton) printButton.style.display = "block"; // Show the button again
 }
 
 
@@ -148,20 +146,23 @@ function renderUserInfo(userDetails) {
   // Add user details inside a container
   const userInfoHtml = `
     <div style="
-      max-width: 900px;
+       max-width: 900px;
       margin: 20px auto;
       padding: 20px;
       background-color: #ffffff;
+      font-size: 16px;
+      line-height: 1.6;
+      font-family: 'Source Serif Variable', serif;
     ">
      
-        <button 
+       <button
         id="print-btn"
           style="
             margin: 20px 52px;
             width: 90px;
             height: 30px;
             cursor: pointer;
-          " 
+          "
           onclick=handlePrint()>
           Print
         </button>
@@ -182,7 +183,7 @@ function renderUserInfo(userDetails) {
           </tr>
         </table>
         <br>
-        <table width="800" cellpadding="2" cellspacing="2">
+        <table width="800" cellpadding="2" cellspacing="2"  style="border-collapse: separate; style="border-spacing: 50px;">
           <tr>
               <td>
                   <!-- Dynamic User Photo -->
@@ -191,17 +192,17 @@ function renderUserInfo(userDetails) {
               <td align="right">
                   Визанын номери/visa number: ${userDetails.visaNumber}<br>
                 
-                  <div id="" class="qr-code" style="margin: 10px;">
-                      <img id="qr-info" src='${userDetails.qrCode}' width="140" />
+                  <div id="qr-info" style="margin: 10px;">
+                      
                   </div>
               </td>
           </tr>
           <tr>
               <td colspan="2">
-                  <table width="100%" cellpadding="2" cellspacing="2">
+                  <table width="100%" cellpadding="2" cellspacing="10" style= "diplay: flex; justify-content: space-between;">
                       <tr>
                           <td>Толук аты-жөнү/Full name:</td>
-                          <td>${userDetails.fullName}</td>
+                          <td >${userDetails.fullName}</td>
                       </tr>
                       <tr>
                           <td>Туулган датасы/Date of birth:</td>
@@ -298,6 +299,7 @@ function closeModal() {
 
 // Attach event listeners
 document.addEventListener("DOMContentLoaded", () => {
+
   generateCaptcha();
 
   // Attach event listeners for "NEXT" button
@@ -315,6 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.error("VALIDATE OTP button (btn_validate_otp) not found in the DOM.");
   }
+
 
   const refNo = getQueryParam("refNo");
   // Find the user by RefNo
