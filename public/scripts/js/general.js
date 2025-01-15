@@ -102,9 +102,7 @@ function handleOtpValidation() {
 // Function to handle print button click
 function handlePrint() {
   const printButton = document.getElementById("print-btn");
-  printButton.addEventListener("click", () => {
-    printButton.style.display = "none";
-  });
+
   printButton.style.display = "none"; // Hide the button
 
   window.print();
@@ -146,11 +144,12 @@ function renderUserInfo(userDetails) {
     #print-btn {
       display: none !important; /* Ensure it is hidden on mobile */
     }
+
   }
 </style>
 
 
-    <div style="
+    <div class="mainDiv" style="
        max-width: 900px;
       margin: 20px auto;
       padding: 20px;
@@ -167,12 +166,13 @@ function renderUserInfo(userDetails) {
             width: 90px;
             height: 30px;
             cursor: pointer;
+            display: block;
           "
           onclick=handlePrint()>
           Print
         </button>
          <center>
-        <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black;">
+        <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black; padding: 10px;">
           <tr>
               <td align="left" valign="top">
               
