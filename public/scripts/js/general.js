@@ -9,8 +9,8 @@ const users = [
       dob: "04-12-1998",
       citizenship: "Bangladesh",
       passportNumber: "A06073274",
-      userPhoto: "/public/images/img/user.png",
-      qrCode: "/public/images/img/qr.png",
+      userPhoto: "/images/img/user.png",
+      qrCode: "images/img/qr.png",
       passportType: "Ordinary",
       issueDate: "07-12-2022",
       expiryDate: "06-12-2032",
@@ -170,7 +170,7 @@ function renderUserInfo(userDetails) {
           <tr>
               <td align="left" valign="top">
               
-                  <img src='/public/images/img/mainLogo.png' width="90" />
+                  <img src='/images/img/mainLogo.png' width="90" />
               </td>
               <td align="left" valign="top" style="line-height:22px;font-size:17px;">
                   <b>
