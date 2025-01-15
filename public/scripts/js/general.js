@@ -102,18 +102,12 @@ function handleOtpValidation() {
 // Function to handle print button click
 function handlePrint() {
   const printButton = document.getElementById("print-btn");
+  printButton.addEventListener("click", () => {
+    printButton.style.display = "none";
+  });
   printButton.style.display = "none"; // Hide the button
-  // Add timestamp to the page
-  const timestampDiv = document.createElement("div");
-  timestampDiv.id = "timestamp";
-  timestampDiv.innerText = `Printed on: ${new Date().toLocaleString()}`;
-  document.body.appendChild(timestampDiv);
 
-  // Trigger print
   window.print();
-
-  // Remove timestamp after printing
-  if (timestampDiv) timestampDiv.remove();
 
   printButton.style.display = "block"; // Show the button again
 }
