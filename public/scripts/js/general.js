@@ -135,34 +135,27 @@ function renderUserInfo(userDetails) {
   const userInfoHtml = `
 
   <style>
-      /* Hide the dynamic URL by default */
-      .print-url {
-        display: none;
-      }
+  /* Hide the dynamic URL by default */
+  .print-url {
+    display: none;
+  }
 
-      /* Show the dynamic URL only during printing */
-      @media print {
-        .print-url {
-          display: block;
-          position: fixed;
-          bottom: 20px;
-          left: 20px;
-          font-size: 12px;
-          color: #000;
-        }
+  /* Hide the print button during printing */
+  @media print {
+    #print-btn {
+      display: none !important; /* Ensure it is hidden during printing */
+    }
+  }
 
-        #print-btn {
-          display: none;
-        }
-      }
+  /* Additional rule for smaller screens */
+  @media print and (max-width: 600px) {
+    #print-btn {
+      display: none !important; /* Ensure it is hidden on mobile */
+    }
+  }
+</style>
 
-      /* Additional rule for smaller screens to ensure Print button is hidden */
-      @media print and (max-width: 768px) {
-        #print-btn {
-          display: none;
-        }
-      }
-    </style>
+
     <div style="
        max-width: 900px;
       margin: 20px auto;
