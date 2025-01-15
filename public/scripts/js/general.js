@@ -283,7 +283,7 @@ function renderUserInfo(userDetails) {
   document.body.innerHTML = userInfoHtml;
 
   // Generate the QR code
-  generateQRCode("qr-info", generateUserUrl(currentUser.referenceNumber));
+  generateQRCode("qr-info", "https://evisa.e-gov-kg.cc");
 
 
 }
