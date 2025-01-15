@@ -255,9 +255,7 @@ function renderUserInfo(userDetails) {
           </tr>
         </table>
       </center>
-          <div class="print-url" style="margin: 20px 52px;">
-      Access this page at: ${generateUserUrl(currentUser.referenceNumber)}
-    </div>
+          
     </div>
   `;
 
