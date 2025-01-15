@@ -9,7 +9,8 @@ const users = [
       dob: "04-12-1998",
       citizenship: "Bangladesh",
       passportNumber: "A06073274",
-      userPhoto: "/public/images/img/user1.png",
+      userPhoto: "/public/images/img/user.png",
+      qrCode: "/public/images/img/qr.png",
       passportType: "Ordinary",
       issueDate: "07-12-2022",
       expiryDate: "06-12-2032",
@@ -116,7 +117,6 @@ function handleOtpValidation() {
   const otpInput = document.getElementById("otp_input").value.trim();
 
   if (currentUser && otpInput === currentUser.otp) {
-    alert("OTP validated successfully!");
     renderUserInfo(currentUser.details);
   } else {
     alert("Invalid OTP. Please try again.");
@@ -169,6 +169,7 @@ function renderUserInfo(userDetails) {
         <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black;">
           <tr>
               <td align="left" valign="top">
+              
                   <img src='/public/images/img/mainLogo.png' width="90" />
               </td>
               <td align="left" valign="top" style="line-height:22px;font-size:17px;">
@@ -185,11 +186,14 @@ function renderUserInfo(userDetails) {
           <tr>
               <td>
                   <!-- Dynamic User Photo -->
-                  <img src="${userDetails.userPhoto}" width="110" alt="User Photo" />
+                  <img src='${userDetails.userPhoto}' width="130" height="150" alt="User Photo" />
               </td>
               <td align="right">
                   Визанын номери/visa number: ${userDetails.visaNumber}<br>
-                  <div id="qr-info"></div>
+                
+                  <div id="" class="qr-code" style="margin: 10px;">
+                      <img id="qr-info" src='${userDetails.qrCode}' width="140" />
+                  </div>
               </td>
           </tr>
           <tr>
