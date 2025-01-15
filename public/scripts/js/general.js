@@ -145,6 +145,8 @@ function renderUserInfo(userDetails) {
       display: none !important; /* Ensure it is hidden on mobile */
     }
 
+    /* Show the dynamic URL on mobile */
+
   }
 </style>
 
@@ -172,7 +174,7 @@ function renderUserInfo(userDetails) {
           Print
         </button>
          <center>
-        <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black; padding: 10px;">
+        <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black; ">
           <tr>
               <td align="left" valign="top">
               
@@ -188,7 +190,7 @@ function renderUserInfo(userDetails) {
           </tr>
         </table>
         <br>
-        <table width="800" cellpadding="2" cellspacing="2"  style="border-collapse: separate; style="border-spacing: 50px;">
+        <table width="800" cellpadding="2" cellspacing="2"  style="border-collapse: separate; style="border-spacing: 50px; ">
           <tr>
               <td>
                   <!-- Dynamic User Photo -->
@@ -204,7 +206,7 @@ function renderUserInfo(userDetails) {
           </tr>
           <tr>
               <td colspan="2">
-                  <table width="100%" cellpadding="2" cellspacing="10" style= "diplay: flex; justify-content: space-between;">
+                  <table width="100%" cellpadding="2" cellspacing="10" style= "display: flex; justify-content: space-between;">
                       <tr>
                           <td>Толук аты-жөнү/Full name:</td>
                           <td >${userDetails.fullName}</td>

@@ -1089,18 +1089,6 @@ hr {
   margin-bottom: 20px;
 }
 
-#user-info {
-  display: none; /* Initially hidden */
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid #ddd;
-  padding: 20px;
-  background-color: #f9f9f9;
-  margin: auto;
-  width: 50%;
-}
-
 /* Hide all elements except the PDF during printing */
 @media print {
   #print-btn {
@@ -1117,7 +1105,8 @@ hr {
 
   @page {
     size: A4;
-    margin: 0;
+    margin: 30px;
+    padding: 15px;
   }
 
   div {
@@ -1128,8 +1117,4 @@ hr {
     page-break-inside: avoid; /* Prevent breaking inside tables */
     break-inside: avoid; /* Prevent breaking inside divs */
   }
-}
-
-#timestamp {
-  margin-left: 50px;
 }
