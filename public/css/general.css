@@ -1104,7 +1104,7 @@ hr {
 
 /* Hide all elements except the PDF during printing */
 @media print {
-  #print-button {
+  #print-btn {
     display: none; /* Hide the print button during printing */
   }
 
@@ -1112,15 +1112,9 @@ hr {
     background: #ffffff !important; /* Ensure white background */
     margin: 0;
     padding: 0;
-    transform: scale(0.97);
-    transform-origin: 0 0;
+    -webkit-print-color-adjust: exact; /* Ensure colors are printed accurately */
+    zoom: 97%; /* Scale the print to 97% */
   }
-
-  #user-info-container {
-    margin: 0 auto;
-    width: 100%;
-  }
-  /* print only one page */
 
   @page {
     size: A4;
@@ -1129,17 +1123,14 @@ hr {
 
   div {
     page-break-inside: avoid; /* Prevent breaking inside containers */
+    break-inside: avoid; /* Prevent breaking inside divs */
   }
   table {
     page-break-inside: avoid; /* Prevent breaking inside tables */
+    break-inside: avoid; /* Prevent breaking inside divs */
   }
-  #print-btn {
-    display: none; /* Hide the print button during print */
-  }
-  #timestamp {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    font-size: 12px;
-  }
+}
+
+#timestamp {
+  margin-left: 50px;
 }

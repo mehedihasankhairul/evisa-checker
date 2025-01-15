@@ -102,8 +102,7 @@ function handleOtpValidation() {
 // Function to handle print button click
 function handlePrint() {
   const printButton = document.getElementById("print-btn");
-  if (printButton) printButton.style.display = "none"; // Hide the button
-
+  printButton.style.display = "none"; // Hide the button
   // Add timestamp to the page
   const timestampDiv = document.createElement("div");
   timestampDiv.id = "timestamp";
@@ -116,8 +115,7 @@ function handlePrint() {
   // Remove timestamp after printing
   if (timestampDiv) timestampDiv.remove();
 
-  if (printButton) printButton.style.display = "block"; // Show the button again
-
+  printButton.style.display = "block"; // Show the button again
 }
 
 
