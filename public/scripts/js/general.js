@@ -24,7 +24,7 @@ const users = [
   },
 ];
 
-let currentUser = users; // Preselect the first user for simplicity
+let currentUser = null; // Preselect the first user for simplicity
 
 // Generate unique URL for a user
 function generateUserUrl(referenceNumber) {
@@ -169,7 +169,7 @@ function renderUserInfo(userDetails) {
         <table width="800" cellpadding="2" cellspacing="2" style="border-bottom:2px solid black;">
           <tr>
               <td align="left" valign="top">
-                  <img src=`/ public / images / img / mainLogo.png` width="90" />
+                  <img src='/public/images/img/mainLogo.png' width="90" />
               </td>
               <td align="left" valign="top" style="line-height:22px;font-size:17px;">
                   <b>
@@ -312,12 +312,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("VALIDATE OTP button (btn_validate_otp) not found in the DOM.");
   }
 
-
   const refNo = getQueryParam("refNo");
-
   // Find the user by RefNo
   const currentUser = users.find((user) => user.referenceNumber === refNo);
   renderUserInfo(currentUser.details);
+
 
 
   // Attach event listeners
