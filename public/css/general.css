@@ -1119,4 +1119,20 @@ hr {
     padding: 20px;
     width: 100%;
   }
+
+  div {
+    page-break-inside: avoid; /* Prevent breaking inside containers */
+  }
+  table {
+    page-break-inside: avoid; /* Prevent breaking inside tables */
+  }
+  #print-btn {
+    display: none; /* Hide the print button during print */
+  }
+  #timestamp {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+  }
 }

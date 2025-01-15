@@ -1,26 +1,4 @@
-export const users = [
-  {
-    referenceNumber: "ABCD1234",
-    otp: "123456",
-    details: {
-      fullName: "PINTU SHEIKH",
-      dob: "04-12-1998",
-      citizenship: "Bangladesh",
-      passportNumber: "A06073274",
-      userPhoto: "/images/img/user1.png",
-      passportType: "Ordinary",
-      issueDate: "07-12-2022",
-      expiryDate: "06-12-2032",
-      visaNumber: "54639017",
-      visaType: "W - Working visa",
-      validity: "05-01-2025 - 05-03-2025",
-      entries: "SINGLE ENTRY",
-      periodOfStay: "59",
-      invitation: "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗОЛОТОЕ ВЕРЕТЕНО\"",
-      visaDate: "25-12-2024 20:54:27",
-    },
-  },
-];
+import { users } from "./userData.js";
 
 
 let currentUser = null; // Preselect the first user for simplicity
@@ -37,8 +15,6 @@ function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(param);
 }
-
-console.log(generateUserUrl("ABCD1234"));
 
 function generateQRCode(containerId, userUrl) {
   const qrContainer = document.getElementById(containerId);
@@ -127,8 +103,21 @@ function handleOtpValidation() {
 function handlePrint() {
   const printButton = document.getElementById("print-btn");
   if (printButton) printButton.style.display = "none"; // Hide the button
-  window.print(); // Trigger print
+
+  // Add timestamp to the page
+  const timestampDiv = document.createElement("div");
+  timestampDiv.id = "timestamp";
+  timestampDiv.innerText = `Printed on: ${new Date().toLocaleString()}`;
+  document.body.appendChild(timestampDiv);
+
+  // Trigger print
+  window.print();
+
+  // Remove timestamp after printing
+  if (timestampDiv) timestampDiv.remove();
+
   if (printButton) printButton.style.display = "block"; // Show the button again
+
 }
 
 
@@ -266,6 +255,9 @@ function renderUserInfo(userDetails) {
           </tr>
         </table>
       </center>
+          <div class="print-url" style="margin: 20px 52px;">
+      Access this page at: ${generateUserUrl(currentUser.referenceNumber)}
+    </div>
     </div>
   `;
 
