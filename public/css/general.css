@@ -1098,7 +1098,7 @@ hr {
   body {
     background: #ffffff !important; /* Ensure white background */
     margin: 20px;
-    padding: 0;
+    padding: 5px;
     -webkit-print-color-adjust: exact; /* Ensure colors are printed accurately */
     zoom: 96%; /* Scale the print to 97% */
   }
