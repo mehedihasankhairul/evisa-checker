@@ -69,7 +69,7 @@ export const users = [
       dob: "01-01-1995",
       citizenship: "Bangladesh",
       passportNumber: "A09046328",
-      userPhoto: "/images/users/33059214",
+      userPhoto: "/images/users/33059214.png",
       passportType: "Ordinary",
       issueDate: "20-11-2024",
       expiryDate: "19-11-2034",
