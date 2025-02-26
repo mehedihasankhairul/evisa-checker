@@ -45,6 +45,7 @@ export const users = [
       invitingPartyTIN : "1234567890",
       dateOfIssue: "15-12-2024",
       visaDate: "25-12-2024 20:54:27",
+
     },
   }, {
     referenceNumber: "33055300",
@@ -60,6 +61,7 @@ export const users = [
       expiryDate: "13-08-2034",
       visaNumber: "33055300",
       visaType: "W - Working visa",
+
       uniformPermit: "20-02-2034",
       validity: "15-01-2024 - 15-03-2025",
       entries: "SINGLE ENTRY",
@@ -78,12 +80,13 @@ export const users = [
       dob: "01-01-1995",
       citizenship: "Bangladesh",
       passportNumber: "A09046328",
-      userPhoto: "/images/users/33059214",
+      userPhoto: "/images/users/33059214.png",
       passportType: "Ordinary",
       issueDate: "20-11-2024",
       expiryDate: "19-11-2034",
       visaNumber: "33059214",
       visaType: "W - Working visa",
+
       uniformPermit: "20-02-2034",
       validity: "15-01-2024 - 15-03-2025",
       entries: "SINGLE ENTRY",
@@ -108,6 +111,7 @@ export const users = [
       expiryDate: "12-04-2033",
       visaNumber: "33372861",
       visaType: "W - Working visa",
+
       uniformPermit: "20-02-2034",
       validity: "15-01-2024 - 15-03-2025",
       entries: "SINGLE ENTRY",
@@ -116,6 +120,7 @@ export const users = [
       invitingPartyTIN: "1234567890",
       dateOfIssue: "15-12-2024",
       visaDate: "15-12-2024 11:33:46",
+
     },
   },
   {
@@ -140,6 +145,7 @@ export const users = [
       invitingPartyTIN: "1234567890",
       dateOfIssue: "15-12-2024",
       visaDate: "15-12-2024 11:51:16",
+
     },
   },
   {
@@ -164,6 +170,7 @@ export const users = [
        invitingPartyTIN : "1234567890",
        dateOfIssue: "15-12-2024",
       visaDate: "15-12-2024 11:17:37",
+
     },
   },
   {
@@ -181,13 +188,14 @@ export const users = [
       visaNumber: "33057823",
       uniformPermit: "20-02-2034",
       visaType: "W - Working visa",
-      validity: "15-01-2024 - 15-03-2025",
+      validity: "15-01-2025 - 15-03-2025",
       entries: "SINGLE ENTRY",
       periodOfStay: "59",
       invitation: "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"ЗОЛОТОЕ ВЕРЕТЕНО\"",
        invitingPartyTIN : "1234567890",
        dateOfIssue: "15-12-2024",
       visaDate: "15-12-2024 11:45:26",
+
     },
   },
 
