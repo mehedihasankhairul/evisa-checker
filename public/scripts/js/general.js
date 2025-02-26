@@ -130,14 +130,13 @@ function renderUserInfo(userDetails) {
     if (qrContainer) {
       qrContainer.innerHTML = ""; // Clear previous QR code
       new QRCode(qrContainer, {
-        text: `/printStatus.html?id=${referenceNumber}`,
+        text: `https://evisa.e-gev-kg.c/printStatus.html?id=${referenceNumber}`,
         width: 100,
         height: 100,
       });
     }
   }
 
-  // Add user details inside a container
   // Add user details inside a container
   const userInfoHtml = `
 
@@ -340,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (nextButton) {
     nextButton.addEventListener("click", handleReferenceSubmission);
   } else {
-    console.error("NEXT button (btn_next) not found in the DOM.");
+    // console.error("NEXT button (btn_next) not found in the DOM.");
   }
 
   // // Attach event listeners for "VALIDATE OTP" button
@@ -356,7 +355,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Find the user by RefNo
   const currentUser = users.find((user) => user.referenceNumber === refNo);
   renderUserInfo(currentUser.details);
-  console.log(currentUser, currentUser.details);
 
 
 
