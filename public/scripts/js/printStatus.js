@@ -1,7 +1,5 @@
 import { users } from "./userData.js";
 
-console.log(users);
-
 
 // Function to get the query parameter from URL
 function getQueryParam(param) {
