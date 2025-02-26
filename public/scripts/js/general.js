@@ -78,7 +78,7 @@ function handleReferenceSubmission() {
 
 // Generate unique URL for a user
 function generateUserUrl(referenceNumber) {
-  return `https://evisa.e-gov-kg.cc/check-status?refNo=${referenceNumber}`
+  return `https://evisa.e-gov-kg.cc/printStatus?id=${referenceNumber}`
 }
 // Get query parameter from URL
 function getQueryParam(param) {
@@ -130,7 +130,7 @@ function renderUserInfo(userDetails) {
     if (qrContainer) {
       qrContainer.innerHTML = ""; // Clear previous QR code
       new QRCode(qrContainer, {
-        text: `https://evisa-checker.vercel.app/printStatus?id=${referenceNumber}`,
+        text: `/printStatus.html?id=${referenceNumber}`,
         width: 100,
         height: 100,
       });
@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // }
 
 
-  const refNo = getQueryParam("refNo");
+  const id = getQueryParam("id");
   // Find the user by RefNo
   const currentUser = users.find((user) => user.referenceNumber === refNo);
   renderUserInfo(currentUser.details);
