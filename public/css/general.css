@@ -1089,6 +1089,7 @@ hr {
   margin-bottom: 20px;
 }
 
+
 /* Hide all elements except the PDF during printing */
 @media print {
   #print-btn {
@@ -1117,4 +1118,5 @@ hr {
     page-break-inside: avoid; /* Prevent breaking inside tables */
     break-inside: avoid; /* Prevent breaking inside divs */
   }
+  
 }
