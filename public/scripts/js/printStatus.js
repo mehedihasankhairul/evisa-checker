@@ -30,14 +30,9 @@ function renderUserInfo(userDetails) {
     return;
   }
 
+ const userInfoHtml = `
 
-
-
-
-
-  const userInfoHtml = `
-
- <style>
+  <style>
   /* Hide the dynamic URL by default */
   .print-url {
     display: none;
@@ -69,18 +64,8 @@ function renderUserInfo(userDetails) {
       line-height: 1.6;
       font-family: 'Source Serif Variable', serif;
     ">
-
-       <button
-        id="print-btn"
-          style="
-            width: 90px;
-            height: 30px;
-            cursor: pointer;
-            display: block;
-          "
-          onclick=handlePrint()>
-          Print
-        </button>
+     
+      
          <center>
         <table width="800" cellspacing="2" style="border-bottom: 2px solid black; ">
           <tr>
@@ -194,8 +179,6 @@ function renderUserInfo(userDetails) {
       </center>
           
     </div>
-
-
   `;
 
   document.body.innerHTML = userInfoHtml;
