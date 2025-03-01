@@ -2,7 +2,7 @@ import { users } from "./userData.js";
 
 
 
-// window.handlePrint = handlePrint;
+window.handlePrint = handlePrint;
 
 
 // Function to get the query parameter from URL
