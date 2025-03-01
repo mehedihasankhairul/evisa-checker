@@ -207,7 +207,7 @@ export const users = [
       visaType: "W - Working visa",
       uniformPermit: "28-02-2025 - 28-04-2025",
       validity: "28-02-2025 - 28-04-2025",
-      entries: "MULTi ENTRY",
+      entries: "MULTI ENTRY",
       periodOfStay: "59",
       invitation: "ОсОО Империал Групп Компани",
       invitingPartyTIN: "00342201710643",
