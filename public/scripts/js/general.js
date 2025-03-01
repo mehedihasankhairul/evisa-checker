@@ -267,6 +267,10 @@ const userInfoHtml = `
                         <td>Чакыруу тараптын жеке салык номери/ <br> Inviting party's individual taxpayer number:</td>
                         <td>${userDetails.invitingPartyTIN}</td>
                       </tr>
+                       <tr>
+                        <td>Иштөөгө уруксут/The right to work:</td>
+                        <td>${userDetails.rightToWork}</td>
+                      </tr>
                       <tr>
                         <td>Берилген датасы/Date of issue:</td>
                         <td>${userDetails.dateOfIssue}</td>
