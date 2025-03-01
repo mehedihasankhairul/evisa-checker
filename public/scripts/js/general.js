@@ -138,8 +138,7 @@ function renderUserInfo(userDetails) {
   }
 
   // Add user details inside a container
-  // Add user details inside a container
-  const userInfoHtml = `
+const userInfoHtml = `
 
   <style>
   /* Hide the dynamic URL by default */
@@ -174,18 +173,7 @@ function renderUserInfo(userDetails) {
       font-family: 'Source Serif Variable', serif;
     ">
      
-       <button
-        id="print-btn"
-          style="
-            margin: 20px 30px;
-            width: 90px;
-            height: 30px;
-            cursor: pointer;
-            display: block;
-          "
-          onclick=handlePrint()>
-          Print
-        </button>
+      
          <center>
         <table width="800" cellspacing="2" style="border-bottom: 2px solid black; ">
           <tr>
@@ -302,6 +290,7 @@ function renderUserInfo(userDetails) {
   `;
 
   document.body.innerHTML = userInfoHtml;
+
 
   // Generate the QR code
   generateQRCode("qr-info", userDetails.visaNumber);
