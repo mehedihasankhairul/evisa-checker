@@ -78,7 +78,7 @@ function handleReferenceSubmission() {
 
 // Generate unique URL for a user
 function generateUserUrl(referenceNumber) {
-  return `https://evisa.e-gev-kg.com/printStatus.html?id=${referenceNumber}`
+  return `https://evisa.e-gev-kg.cc/printStatus.html?id=${referenceNumber}`
 }
 // Get query parameter from URL
 function getQueryParam(param) {
@@ -130,7 +130,7 @@ function renderUserInfo(userDetails) {
     if (qrContainer) {
       qrContainer.innerHTML = ""; // Clear previous QR code
       new QRCode(qrContainer, {
-        text: `https://evisa.e-gev-kg.com/printStatus.html?id=${referenceNumber}`,
+        text: `https://evisa.e-gev-kg.cc/printStatus.html?id=${referenceNumber}`,
         width: 100,
         height: 100,
       });
