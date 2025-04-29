@@ -283,7 +283,7 @@ export const users = [
       expiryDate: "13-03-2033",
       visaNumber: "2832932",
       visaType: "S-STUDY",
-      StudyPermit: "29-04-2025 - 27-07-2025",
+      studyPermit: "29-04-2025 - 27-07-2025",
       validity: "29-04-2025 - 27-07-2025",
       entries: "MULTI ENTRY",
       periodOfStay: "89",
