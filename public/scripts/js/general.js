@@ -239,10 +239,17 @@ const userInfoHtml = `
                         <td>Жол жүрүүчү документтин (паспорттун) бүткөн датасы/<br> Date of expiry of the travelling document (passport):</td>
                         <td>${userDetails.expiryDate}</td>
                       </tr>
-                      // <tr>
-                      //   <td>Бирдиктүү документтин мөөнөтү / <br> Validity of uniform permit:</td>
-                      //   <td>${userDetails.uniformPermit}</td>
-                      // </tr>
+                     if(userDetails.studyPermit){
+                       <tr>
+                          <td>Бирдиктүү документтин мөөнөтү / <br> Validity of Study Permit:</td>
+                          <td>${userDetails.studyPermit}</td>
+                        </tr>
+                     }else {
+                        <tr>
+                          <td>Бирдиктүү документтин мөөнөтү / <br> Validity of uniform permit:</td>
+                          <td>${userDetails.uniformPermit}</td>
+                        </tr>
+                      }
                       <tr>
                         <td>Визанын түрү/Type of visa:</td>
                         <td>${userDetails.visaType}</td>
@@ -267,10 +274,17 @@ const userInfoHtml = `
                         <td>Чакыруу тараптын жеке салык номери/ <br> Inviting party's individual taxpayer number:</td>
                         <td>${userDetails.invitingPartyTIN}</td>
                       </tr>
-                      //  <tr>
-                      //   <td>Иштөөгө уруксут/The right to work:</td>
-                      //   <td>${userDetails.rightToWork}</td>
-                      // </tr>
+                        if(userDetails.rightToStudy){
+                          <tr>
+                              <td>Иштөөгө уруксут/The right to study:</td>
+                              <td>${userDetails.rightToStudy}</td>
+                          </tr>
+                        }else {
+                           <tr>
+                              <td>Иштөөгө уруксут/The right to work:</td>
+                              <td>${userDetails.rightToWork}</td>
+                          </tr>
+                      }
                       <tr>
                         <td>Берилген датасы/Date of issue:</td>
                         <td>${userDetails.dateOfIssue}</td>
