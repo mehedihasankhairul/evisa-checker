@@ -239,16 +239,17 @@ const userInfoHtml = `
                         <td>Жол жүрүүчү документтин (паспорттун) бүткөн датасы/<br> Date of expiry of the travelling document (passport):</td>
                         <td>${userDetails.expiryDate}</td>
                       </tr>
-                     if(userDetails.studyPermit){
-                       <tr>
-                          <td>Бирдиктүү документтин мөөнөтү / <br> Validity of Study Permit:</td>
-                          <td>${userDetails.studyPermit}</td>
-                        </tr>
-                     }else {
-                        <tr>
-                          <td>Бирдиктүү документтин мөөнөтү / <br> Validity of uniform permit:</td>
-                          <td>${userDetails.uniformPermit}</td>
-                        </tr>
+                      let tableRow;
+                      if (userDetails.rightToStudy) {
+                        tableRow = `<tr>
+                                      <td>Иштөөгө уруксут/The right to study:</td>
+                                      <td>${userDetails.rightToStudy}</td>
+                                    </tr>`;
+                      } else {
+                        tableRow = `<tr>
+                                      <td>Иштөөгө уруксут/The right to work:</td>
+                                      <td>${userDetails.rightToWork}</td>
+                                    </tr>`;
                       }
                       <tr>
                         <td>Визанын түрү/Type of visa:</td>
@@ -307,7 +308,7 @@ const userInfoHtml = `
     </div>
   `;
 
-  document.body.innerHTML = userInfoHtml;
+  document.body.innerHTML = userInfoHtml += tableRow;
 
 
   // Generate the QR code
