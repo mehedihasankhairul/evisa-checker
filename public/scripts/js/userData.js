@@ -281,7 +281,7 @@ export const users = [
       passportType: "Ordinary",
       issueDate: "14-03-2023",
       expiryDate: "13-03-2033",
-      visaNumber: "33055300",
+      visaNumber: "2832932",
       visaType: "S-STUDY",
       StudyPermit: "29-04-2025 - 27-07-2025",
       validity: "29-04-2025 - 27-07-2025",
