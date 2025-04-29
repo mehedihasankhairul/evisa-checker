@@ -238,21 +238,10 @@ const userInfoHtml = `
                       <tr>
                         <td>Жол жүрүүчү документтин (паспорттун) бүткөн датасы/<br> Date of expiry of the travelling document (passport):</td>
                         <td>${userDetails.expiryDate}</td>
-                      </tr>
-                      //     if(userDetails.studyPermit){
-                      //   <tr>
-                      //      <td>Бирдиктүү документтин мөөнөтү / <br> Validity of Study Permit:</td>
-                      //      <td>${userDetails.studyPermit}</td>
-                      //    </tr>
-                      // }else {
-                      //    <tr>
-                      //      <td>Бирдиктүү документтин мөөнөтү / <br> Validity of uniform permit:</td>
-                      //      <td>${userDetails.uniformPermit}</td>
-                      //    </tr>
-                      //    }
+                   
                       // change uniformPermit to studyPermit
                           <tr>
-                         <td>Бирдиктүү документтин мөөнөтү / <br> Validity of uniform permit:</td>
+                         <td>Бирдиктүү документтин мөөнөтү / <br> Validity of study permit:</td>
                           <td>${userDetails.studyPermit}</td>
                        </tr>
                       <tr>
@@ -278,22 +267,11 @@ const userInfoHtml = `
                       <tr>
                         <td>Чакыруу тараптын жеке салык номери/ <br> Inviting party's individual taxpayer number:</td>
                         <td>${userDetails.invitingPartyTIN}</td>
-                      </tr>
-                      //            if(userDetails.studyPermit){
-                      //   <tr>
-                      //      <td>Бирдиктүү документтин мөөнөтү / <br> Validity of Study Permit:</td>
-                      //      <td>${userDetails.studyPermit}</td>
-                      //    </tr>
-                      // }else {
-                      //    <tr>
-                      //      <td>Бирдиктүү документтин мөөнөтү / <br> Validity of uniform permit:</td>
-                      //      <td>${userDetails.uniformPermit}</td>
-                      //    </tr>
-                      // }
+                     
 
                       // change right to work to right study
                         <tr>
-                        <td>Иштөөгө уруксут/The right to work:</td>
+                        <td>Иштөөгө уруксут/The right to study:</td>
                         <td>${userDetails.rightToStudy}</td>
                       </tr>
                       <tr>
