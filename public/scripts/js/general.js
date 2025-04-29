@@ -241,15 +241,15 @@ const userInfoHtml = `
                       </tr>
                       let tableRow;
                       if (userDetails.rightToStudy) {
-                        tableRow = `<tr>
-                                      <td>Иштөөгө уруксут/The right to study:</td>
-                                      <td>${userDetails.rightToStudy}</td>
-                                    </tr>`;
+                       <tr>
+                           <td>Иштөөгө уруксут/The right to study:</td>
+                            <td>${userDetails.rightToStudy}</td>
+                        </tr>;
                       } else {
-                        tableRow = `<tr>
-                                      <td>Иштөөгө уруксут/The right to work:</td>
-                                      <td>${userDetails.rightToWork}</td>
-                                    </tr>`;
+                        <tr>
+                              <td>Иштөөгө уруксут/The right to work:</td>
+                               <td>${userDetails.rightToWork}</td>
+                         </tr>;
                       }
                       <tr>
                         <td>Визанын түрү/Type of visa:</td>
@@ -308,7 +308,7 @@ const userInfoHtml = `
     </div>
   `;
 
-  document.body.innerHTML = userInfoHtml += tableRow;
+  document.body.innerHTML = userInfoHtml;
 
 
   // Generate the QR code
