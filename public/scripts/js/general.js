@@ -238,12 +238,7 @@ const userInfoHtml = `
                       <tr>
                         <td>Жол жүрүүчү документтин (паспорттун) бүткөн датасы/<br> Date of expiry of the travelling document (passport):</td>
                         <td>${userDetails.expiryDate}</td>
-                   
-                      // change uniformPermit to studyPermit
-                          <tr>
-                         <td>Бирдиктүү документтин мөөнөтү / <br> Validity of study permit:</td>
-                          <td>${userDetails.studyPermit}</td>
-                       </tr>
+               
                       <tr>
                         <td>Визанын түрү/Type of visa:</td>
                         <td>${userDetails.visaType}</td>
@@ -269,7 +264,7 @@ const userInfoHtml = `
                         <td>${userDetails.invitingPartyTIN}</td>
                      
 
-                      // change right to work to right study
+                     
                         <tr>
                         <td>Иштөөгө уруксут/The right to study:</td>
                         <td>${userDetails.rightToStudy}</td>
