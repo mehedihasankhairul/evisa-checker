@@ -103,7 +103,7 @@ function renderUserInfo(userDetails) {
                     <col style="width: 35%;"> <!-- Second column (value) is smaller -->
                   </colgroup>
 
-                      <tr>
+                       <tr>
                         <td>Толук аты-жөнү/Full name:</td>
                         <td>${userDetails.fullName}</td>
                       </tr>
@@ -130,11 +130,7 @@ function renderUserInfo(userDetails) {
                       <tr>
                         <td>Жол жүрүүчү документтин (паспорттун) бүткөн датасы/<br> Date of expiry of the travelling document (passport):</td>
                         <td>${userDetails.expiryDate}</td>
-                      </tr>
-                      <tr>
-                        <td>Бирдиктүү документтин мөөнөтү / <br> Validity of uniform permit:</td>
-                        <td>${userDetails.uniformPermit}</td>
-                      </tr>
+               
                       <tr>
                         <td>Визанын түрү/Type of visa:</td>
                         <td>${userDetails.visaType}</td>
@@ -158,10 +154,12 @@ function renderUserInfo(userDetails) {
                       <tr>
                         <td>Чакыруу тараптын жеке салык номери/ <br> Inviting party's individual taxpayer number:</td>
                         <td>${userDetails.invitingPartyTIN}</td>
-                      </tr>
-                       <tr>
-                        <td>Иштөөгө уруксут/The right to work:</td>
-                        <td>${userDetails.rightToWork}</td>
+                     
+
+                     
+                        <tr>
+                        <td>Иштөөгө уруксут/The right to study:</td>
+                        <td>${userDetails.rightToStudy}</td>
                       </tr>
                       <tr>
                         <td>Берилген датасы/Date of issue:</td>
