@@ -290,7 +290,7 @@ export const users = [
       invitation: "Салымбековский медицинский университет",
       invitingPartyTIN: "00342201710643",
       rightToStudy: "Study permit",
-      dateOfIssue: "2025-04-29",
+      dateOfIssue: "2025-05-03",
       visaDate: "2025-05-03",
       pdfPath: "/public/pdfFiles/2832932.pdf",
     },
